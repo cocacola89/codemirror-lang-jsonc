@@ -25,19 +25,17 @@ Thanks to [marijnh](https://github.com/marijnh) and [SirPepe](https://github.com
 
 ```javascript
 import {EditorView, basicSetup} from "codemirror"
-import {json} from "@codemirror/lang-json"
+import {jsonc} from "@cocacola89/codemirror-lang-json"
 
 const view = new EditorView({
   parent: document.body,
   doc: `{"version": "9.99.99", /* comment */ "data": [1, 2, 3]}`,
-  extensions: [basicSetup, json()]
+  extensions: [basicSetup, jsonc()]
 })
 ```
 
 ## API Reference
 
-@json
+@jsonc
 
-@jsonLanguage
-
-@jsonParseLinter
+@jsoncLanguage

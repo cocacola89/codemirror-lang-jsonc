@@ -2,8 +2,8 @@ import {parser} from "@codemovie/grammar-json-with-comments"
 import {continuedIndent, indentNodeProp, foldNodeProp, foldInside, LRLanguage, LanguageSupport} from "@codemirror/language"
 
 /// A language provider that provides JSON parsing.
-export const jsonLanguage = LRLanguage.define({
-  name: "json",
+export const jsoncLanguage = LRLanguage.define({
+  name: "jsonc",
   parser: parser.configure({
     props: [
       indentNodeProp.add({
@@ -21,9 +21,7 @@ export const jsonLanguage = LRLanguage.define({
   }
 })
 
-/// JSON language support.
-export function json() {
-  return new LanguageSupport(jsonLanguage)
+/// JSONC language support.
+export function jsonc() {
+  return new LanguageSupport(jsoncLanguage)
 }
-
-export {jsonParseLinter} from "./lint"

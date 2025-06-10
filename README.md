@@ -25,29 +25,22 @@ Thanks to [marijnh](https://github.com/marijnh) and [SirPepe](https://github.com
 
 ```javascript
 import {EditorView, basicSetup} from "codemirror"
-import {json} from "@codemirror/lang-json"
+import {jsonc} from "@cocacola89/codemirror-lang-json"
 
 const view = new EditorView({
   parent: document.body,
   doc: `{"version": "9.99.99", /* comment */ "data": [1, 2, 3]}`,
-  extensions: [basicSetup, json()]
+  extensions: [basicSetup, jsonc()]
 })
 ```
 
 ## API Reference
 
- * **`json`**`() → LanguageSupport`\
-   JSON language support.
+ * **`jsonc`**`() → LanguageSupport`\
+   JSONC language support.
 
 
- * **`jsonLanguage`**`: LRLanguage`\
+ * **`jsoncLanguage`**`: LRLanguage`\
    A language provider that provides JSON parsing.
-
-
- * **`jsonParseLinter`**`() → fn(view: EditorView) → Diagnostic[]`\
-   Calls
-   [`JSON.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
-   on the document and, if that throws an error, reports it as a
-   single diagnostic.
 
 
