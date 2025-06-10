@@ -4,7 +4,7 @@
 
 [ [**WEBSITE**](https://codemirror.net/) | [**ISSUES**](https://github.com/codemirror/dev/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/lang-json/blob/main/CHANGELOG.md) ]
 
-This package implements JSON language support for the
+This package implements JSONC language support for the
 [CodeMirror](https://codemirror.net/) code editor.
 
 The [project page](https://codemirror.net/) has more information, a
@@ -19,6 +19,8 @@ we have a [code of
 conduct](http://contributor-covenant.org/version/1/1/0/) that applies
 to communication around the project.
 
+Thanks to [marijnh](https://github.com/marijnh) and [SirPepe](https://github.com/SirPepe) for their contributions that made this fork possible.
+
 ## Usage
 
 ```javascript
@@ -27,7 +29,7 @@ import {json} from "@codemirror/lang-json"
 
 const view = new EditorView({
   parent: document.body,
-  doc: `{"version": "9.99.99", "data": [1, 2, 3]}`,
+  doc: `{"version": "9.99.99", /* comment */ "data": [1, 2, 3]}`,
   extensions: [basicSetup, json()]
 })
 ```

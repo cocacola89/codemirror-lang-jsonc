@@ -1,4 +1,4 @@
-import {parser} from "@lezer/json"
+import {parser} from "@codemovie/grammar-json-with-comments"
 import {continuedIndent, indentNodeProp, foldNodeProp, foldInside, LRLanguage, LanguageSupport} from "@codemirror/language"
 
 /// A language provider that provides JSON parsing.
